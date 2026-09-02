@@ -1,3 +1,6 @@
+/* ============================================================
+   IMPORTS & ROOT VARIABLES
+   ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cairo:wght@400;600;700;900&display=swap');
 
 :root {
@@ -32,6 +35,9 @@
     --progress-bg: rgba(255, 255, 255, 0.2);
 }
 
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
 * {
     margin: 0;
     padding: 0;
@@ -47,6 +53,10 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease;
     font-weight: 300;
 }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
 .luxury-header {
     position: fixed;
     top: 0;
@@ -113,67 +123,7 @@ nav ul li a.active::after {
 .header-controls {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-@media(max-width: 992px) {
-    .luxury-header {
-        padding: 15px 20px;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .mobile-header-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    .nav-spacer,
-    .luxury-header > .header-controls {
-        display: none !important;
-    }
-.menu-toggle {
-    background: none;
-    border: none;
-    font-size: 18px;
-    color: var(--text-main, #fff);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    z-index: 1001;
-}
-
-.menu-toggle i {
-    font-size: 20px;
-    color: var(--text-main, #fff);
-}
-
-    .nav-menu {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-        width: 100%;
-    }
-
-    .nav-menu.active {
-        max-height: 400px;
-        margin-top: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding-bottom: 10px;
-    }
-}
-.header-controls {
-    display: flex;
     gap: 12px;
-    align-items: center;
 }
 
 .control-btn {
@@ -204,14 +154,18 @@ nav ul li a.active::after {
     border-color: var(--accent-pink);
 }
 
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
 .hero-luxury {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 140px 60px 80px 60px;
-    background: radial-gradient(circle at 10% 20%, rgba(147, 51, 234, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.08) 0%, transparent 40%);
+    background:
+        radial-gradient(circle at 10% 20%, rgba(147, 51, 234, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.08) 0%, transparent 40%);
     overflow: hidden;
 }
 
@@ -225,8 +179,16 @@ nav ul li a.active::after {
     opacity: 0.3;
 }
 
-.orb-1 { top: -100px; left: -100px; background-color: #9333ea; }
-.orb-2 { bottom: -100px; right: -100px; background-color: var(--accent-pink); }
+.orb-1 {
+    top: -100px;
+    left: -100px;
+    background-color: #9333ea;
+}
+.orb-2 {
+    bottom: -100px;
+    right: -100px;
+    background-color: var(--accent-pink);
+}
 
 .hero-wrapper {
     position: relative;
@@ -279,7 +241,7 @@ nav ul li a.active::after {
 .hero-actions-container {
     display: flex;
     flex-direction: column;
-    gap: 28px; 
+    gap: 28px;
     align-items: flex-start;
 }
 
@@ -326,7 +288,7 @@ nav ul li a.active::after {
     justify-content: center;
     color: var(--text-main);
     font-size: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
 }
 
@@ -367,12 +329,20 @@ nav ul li a.active::after {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    display: block;
 }
 
 .glass-card-frame:hover .profile-glow-box img {
     transform: scale(1.05);
 }
 
+.mobile-hero-visual {
+    display: none;
+}
+
+/* ============================================================
+   ABOUT SECTION (WHO AM I)
+   ============================================================ */
 .who-am-i {
     background-color: var(--about-bg);
     color: var(--about-text);
@@ -442,6 +412,9 @@ nav ul li a.active::after {
     transform: translateY(-2px);
 }
 
+/* ============================================================
+   SKILLS BARS
+   ============================================================ */
 .skills-bars {
     display: flex;
     flex-direction: column;
@@ -479,6 +452,9 @@ nav ul li a.active::after {
     transition: width 1.5s cubic-bezier(0.1, 0.8, 0.3, 1);
 }
 
+/* ============================================================
+   EDUCATION
+   ============================================================ */
 .education-section {
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -585,60 +561,10 @@ nav ul li a.active::after {
     line-height: 1.8;
     letter-spacing: 0.5px;
 }
-.mobile-hero-visual {
-    display: none;
-}
 
-@media(max-width: 992px) {
-    .luxury-header {
-        padding: 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
-    .nav-spacer {
-        display: none;
-    }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    .hero-luxury {
-        padding: 180px 20px 60px 20px;
-        text-align: center;
-    }
-    .hero-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .hero-title .name-line {
-        font-size: 32px;
-    }
-    .hero-actions-container {
-        align-items: center;
-    }
-    .who-container {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-        gap: 40px;
-    }
-    .who-am-i, .education-section {
-        padding: 80px 20px;
-    }
-    .edu-card {
-        flex-direction: column;
-        padding: 25px;
-        gap: 20px;
-    }
-    .desktop-hero-visual {
-        display: none !important;
-    }
-    .mobile-hero-visual {
-        display: flex !important;
-        justify-content: center;
-        margin: 20px 0;
-    }
-}
+/* ============================================================
+   PROJECTS
+   ============================================================ */
 .projects-section {
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -851,17 +777,9 @@ nav ul li a.active::after {
     border-color: var(--accent-pink);
 }
 
-@media(max-width: 992px) {
-    .projects-section {
-        padding: 80px 20px;
-    }
-    .project-image-box {
-        height: 280px;
-    }
-    .project-info {
-        padding: 25px;
-    }
-}
+/* ============================================================
+   SERVICES
+   ============================================================ */
 .services-section {
     padding: 130px 80px;
     background-color: var(--bg-main);
@@ -931,16 +849,9 @@ nav ul li a.active::after {
     line-height: 1.8;
 }
 
-@media (max-width: 992px) {
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    .services-section {
-        padding: 80px 20px;
-    }
-    
-}
+/* ============================================================
+   USP BOX
+   ============================================================ */
 .usp-box {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -977,8 +888,11 @@ nav ul li a.active::after {
     color: var(--text-muted);
     font-weight: 500;
 }
-.experience-section,
-.contact-section {
+
+/* ============================================================
+   EXPERIENCE / ACHIEVEMENTS (TIMELINE)
+   ============================================================ */
+.experience-section {
     padding: 130px 80px;
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -986,8 +900,7 @@ nav ul li a.active::after {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.experience-container,
-.contact-container {
+.experience-container {
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -1030,17 +943,12 @@ nav ul li a.active::after {
     border-radius: 20px;
 }
 
-.timeline-content,
-.contact-form-wrapper,
-.contact-info-card {
+.timeline-content {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     backdrop-filter: blur(20px);
     box-shadow: 0 20px 40px rgba(147, 51, 234, 0.06);
     border-radius: 20px;
-}
-
-.timeline-content {
     padding: 30px;
 }
 
@@ -1078,6 +986,22 @@ nav ul li a.active::after {
     margin-top: 4px;
 }
 
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-section {
+    padding: 130px 80px;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    width: 100%;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 .section-title-box {
     text-align: center;
     margin-bottom: 60px;
@@ -1102,19 +1026,6 @@ nav ul li a.active::after {
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 30px;
-    align-items: start;
-}
-
-@media (max-width: 900px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.contact-grid {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1134,6 +1045,11 @@ nav ul li a.active::after {
     align-items: center;
     gap: 15px;
     padding: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(147, 51, 234, 0.06);
+    border-radius: 20px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -1154,10 +1070,22 @@ nav ul li a.active::after {
     flex-shrink: 0;
 }
 
-.email-card .icon-box { background: rgba(234, 67, 53, 0.15); color: #ea4335; }
-.whatsapp-card .icon-box { background: rgba(37, 211, 102, 0.15); color: #25d366; }
-.linkedin-card .icon-box { background: rgba(10, 102, 194, 0.15); color: #0a66c2; }
-.github-card .icon-box { background: rgba(150, 150, 150, 0.15); color: var(--text-main); }
+.email-card .icon-box {
+    background: rgba(234, 67, 53, 0.15);
+    color: #ea4335;
+}
+.whatsapp-card .icon-box {
+    background: rgba(37, 211, 102, 0.15);
+    color: #25d366;
+}
+.linkedin-card .icon-box {
+    background: rgba(10, 102, 194, 0.15);
+    color: #0a66c2;
+}
+.github-card .icon-box {
+    background: rgba(150, 150, 150, 0.15);
+    color: var(--text-main);
+}
 
 .card-info {
     display: flex;
@@ -1180,6 +1108,7 @@ nav ul li a.active::after {
     text-overflow: ellipsis;
 }
 
+/* Hover state overrides for each contact card */
 .contact-info-card.email-card:hover .card-value,
 .contact-info-card.email-card:hover .icon-box {
     color: #ea4335 !important;
@@ -1211,6 +1140,10 @@ nav ul li a.active::after {
 .contact-info-card.github-card:hover {
     border-color: #38bdf8 !important;
 }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .footer {
     background-color: #161224;
     color: #ffffff;
@@ -1332,77 +1265,208 @@ nav ul li a.active::after {
     color: #cbd5e1;
 }
 
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .footer-col {
-        text-align: center;
-    }
-    .footer-col p,
-    .footer-col .social-icons {
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: center;
-    }
-}
-
+/* ============================================================
+   RESPONSIVE – TABLETS & SMALL SCREENS (max-width: 992px)
+   ============================================================ */
 @media (max-width: 992px) {
-   
-    body, html {
+    /* ----- Global fixes ----- */
+    html,
+    body {
         width: 100% !important;
         overflow-x: hidden !important;
         margin: 0 !important;
         padding: 0 !important;
     }
 
-   
+    /* ----- Header (mobile) ----- */
+    .luxury-header {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mobile-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-spacer,
+    .luxury-header>.header-controls {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: var(--text-main, #fff);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        z-index: 1001;
+    }
+
+    .menu-toggle i {
+        font-size: 20px;
+        color: var(--text-main, #fff);
+    }
+
+    .nav-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        max-height: 400px;
+        margin-top: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    /* ----- Hero ----- */
     .hero-luxury {
         padding: 120px 15px 40px 15px !important;
+        text-align: center;
     }
 
     .hero-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
         grid-template-columns: 1fr !important;
         gap: 30px !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .hero-title .name-line {
+        font-size: 32px;
+    }
+
+    .hero-actions-container {
+        align-items: center;
+    }
+
+    /* ----- Profile image fix (mobile) ----- */
+    .desktop-hero-visual {
+        display: none !important;
+    }
+
+    .mobile-hero-visual {
+        display: flex !important;
+        justify-content: center;
+        margin: 20px 0;
     }
 
     .glass-card-frame {
         max-width: 100% !important;
-        box-sizing: border-box !important;
+        padding: 12px !important;
+        margin: 0 auto;
+        display: inline-block;
     }
 
     .profile-glow-box {
-        max-width: 100% !important;
-        width: 100% !important;
-        height: auto !important;
+        width: 220px !important;
+        height: 220px !important;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
-    * {
-        box-sizing: border-box !important;
+    /* ----- About ----- */
+    .who-am-i {
+        padding: 80px 20px;
     }
-}
-@media (max-width: 992px) {
-    .timeline-content h3, 
-    .edu-content h3, 
+
+    .who-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 15px;
+    }
+
+    /* ----- Education ----- */
+    .education-section {
+        padding: 80px 20px;
+    }
+
+    .edu-card {
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    /* ----- Projects ----- */
+    .projects-section {
+        padding: 80px 20px;
+    }
+
+    .project-image-box {
+        height: 280px;
+    }
+
+    .project-info {
+        padding: 25px;
+    }
+
+    /* ----- Services ----- */
+    .services-section {
+        padding: 80px 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* ----- Experience / Achievements (Timeline) ----- */
+    .experience-section {
+        padding: 80px 20px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-dot {
+        left: -27px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline-content {
+        padding: 20px 15px;
+    }
+
+    /* ----- Contact ----- */
+    .contact-section {
+        padding: 80px 20px;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .contact-cards-list {
+        max-width: 100%;
+    }
+
+    /* ----- Typography tweaks for readability ----- */
+    .timeline-content h3,
+    .edu-content h3,
     .project-info h3 {
         font-size: 18px !important;
         line-height: 1.4 !important;
     }
 
-    .timeline-content h4, 
+    .timeline-content h4,
     .edu-content h4 {
         font-size: 14px !important;
-    }
-
-    .timeline-content, 
-    .edu-card, 
-    .project-info {
-        padding: 20px 15px !important;
     }
 
     .timeline-content .project-features li,
@@ -1410,5 +1474,91 @@ nav ul li a.active::after {
         font-size: 12px !important;
         line-height: 1.5 !important;
         gap: 8px !important;
+    }
+
+    /* ----- Footer (already handled below for 768px) ----- */
+}
+
+/* ============================================================
+   RESPONSIVE – FOOTER & EXTRA SMALL (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col p,
+    .footer-col .social-icons {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    .footer-col p {
+        max-width: 100%;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE – VERY SMALL PHONES (max-width: 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+    .profile-glow-box {
+        width: 170px !important;
+        height: 170px !important;
+    }
+
+    .hero-title .name-line {
+        font-size: 28px;
+    }
+
+    .greeting-line {
+        font-size: 20px;
+    }
+
+    .hero-role {
+        font-size: 18px;
+    }
+
+    .section-header h2,
+    .section-title-box .gradient-title {
+        font-size: 30px;
+    }
+
+    .who-text h2 {
+        font-size: 34px;
+    }
+
+    .who-text h3 {
+        font-size: 18px;
+    }
+
+    .edu-content h3 {
+        font-size: 16px !important;
+    }
+
+    .project-info h3 {
+        font-size: 16px !important;
+    }
+
+    .service-card {
+        padding: 25px 20px;
+    }
+
+    .usp-box {
+        padding: 25px 20px;
+    }
+
+    .contact-info-card {
+        padding: 15px;
+    }
+
+    .card-value {
+        font-size: 13px;
     }
 }

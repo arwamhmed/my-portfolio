@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arwa Mohamed Ramadan | Front-End Developer</title>
+    <!-- Google Fonts - Luxury Tech Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header and Navigation Section -->
+    <header class="luxury-header">
+        <div class="mobile-header-row">
+            <div class="header-controls">
+                <button class="control-btn theme-btn" id="themeToggleMobile" onclick="toggleTheme()" title="Toggle Theme">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button class="control-btn lang-btn" id="langToggleMobile" onclick="toggleLanguage()">العربية</button>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span data-en="Menu" data-ar="القائمة">Menu</span>
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="nav-spacer"></div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#home" class="nav-link" data-en="HOME" data-ar="الرئيسية">HOME</a></li>
+                <li><a href="#about" class="nav-link" data-en="ABOUT" data-ar="عني">ABOUT</a></li>
+                <li><a href="#education" class="nav-link" data-en="EDUCATION" data-ar="التعليم">EDUCATION</a></li>
+                <li><a href="#projects" class="nav-link" data-en="PROJECTS" data-ar="المشاريع">PROJECTS</a></li>
+                <li><a href="#services" class="nav-link" data-en="SERVICES" data-ar="الخدمات">SERVICES</a></li>
+                <li><a href="#achievements" class="nav-link" data-en="ACHIEVEMENTS" data-ar="الإنجازات">ACHIEVEMENTS</a></li>
+                <li><a href="#contact" class="nav-link" data-en="CONTACT" data-ar="تواصل معي">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-controls">
+            <button class="control-btn theme-btn" id="themeToggle" onclick="toggleTheme()" title="Toggle Theme">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+            <button class="control-btn lang-btn" id="langToggle" onclick="toggleLanguage()">العربية</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-luxury" id="home">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+
+        <div class="hero-wrapper">
+            <div class="hero-text-content">
+                <h1 class="hero-title">
+                    <span class="greeting-line" data-en="Hello, I'm" data-ar="مرحباً، أنا">Hello, I'm</span>
+                    <span class="name-line" data-en="Arwa Mohamed Ramadan" data-ar="أروى محمد رمضان">Arwa Mohamed Ramadan</span>
+                </h1>
+
+                <h2 class="hero-role" data-en="Front-End Developer" data-ar="مطورة واجهات أمامية (Front-End Developer)">
+                    Front-End Developer
+                </h2>
+
+                <div class="mobile-hero-visual">
+                    <div class="glass-card-frame">
+                        <div class="profile-glow-box">
+                            <img src="image.jpeg" alt="Arwa Mohamed Ramadan">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions-container">
+                    <div class="connect-group">
+                        <span data-en="Connect With Me:" data-ar="تواصل معي:">Connect With Me:</span>
+                        <div class="hero-socials">
+                            <a href="https://www.linkedin.com/in/arwa-mohamed-front-end" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/arwamhmed" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://wa.me/201010824706" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="mailto:arwamhmed27@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <a href="#projects" class="btn-primary" data-en="Explore Work" data-ar="استعرض أعمالي">Explore Work</a>
+                </div>
+            </div>
+
+            <div class="hero-visual desktop-hero-visual">
+                <div class="glass-card-frame">
+                    <div class="profile-glow-box">
+                        <img src="image.jpeg" alt="Arwa Mohamed Ramadan">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="who-am-i" id="about">
+        <div class="who-container">
+            <div class="who-text">
+                <h2 data-en="WHO AM I?" data-ar="من أنا؟">WHO AM I?</h2>
+                <h3 data-en="Professional Front-End Developer focused on clean code & stellar user experiences." data-ar="مطورة واجهات أمامية محترفة تركز على نظافة الكود وتجارب المستخدم الاستثنائية.">
+                    Professional Front-End Developer focused on clean code & stellar user experiences.
+                </h3>
+                <p data-en="Passionate about building responsive, high-performance web interfaces with modern technologies. I combine creative design principles with advanced front-end technologies to deliver exceptional digital experiences." data-ar="شغوفة ببناء واجهات ويب متجاوبة وعالية الأداء باستخدام التقنيات الحديثة. أجمع بين مبادئ التصميم الإبداعي وأحدث تقنيات الواجهات الأمامية لتقديم تجارب رقمية استثنائية.">
+                    Passionate about building responsive, high-performance web interfaces with modern technologies. I combine creative design principles with advanced front-end technologies to deliver exceptional digital experiences.
+                </p>
+
+                <div class="connect-row">
+                    <span data-en="CONNECT WITH ME" data-ar="تواصل معي">CONNECT WITH ME</span>
+                    <span>></span>
+                    <div class="about-socials">
+                        <a href="https://www.linkedin.com/in/arwa-mohamed-front-end" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/arwamhmed" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://wa.me/201010824706" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:arwamhmed27@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-bars">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>HTML & CSS</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress" data-width="90"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>JAVASCRIPT & REACT</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress" data-width="85"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span data-en="C# & DATABASES" data-ar="C# وقواعد البيانات (Databases)">C# & DATABASES</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress" data-width="80"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>GIT & GITHUB</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress" data-width="80"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section" id="education">
+        <div class="education-container">
+            <div class="section-header">
+                <h2 data-en="ACADEMIC EDUCATION" data-ar="التعليم الأكاديمي">ACADEMIC EDUCATION</h2>
+                <p data-en="My academic foundation in computer science." data-ar="أساسي الأكاديمي في علوم الحاسب.">
+                    My academic foundation in computer science.
+                </p>
+            </div>
+
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-content">
+                        <span class="edu-date">2024 - 2028</span>
+                        <h3 data-en="Bachelor of Computer Science" data-ar="بكالوريوس علوم الحاسب">Bachelor of Computer Science</h3>
+                        <h4 data-en="Faculty of Science, Suez University" data-ar="كلية العلوم، جامعة السويس">Faculty of Science, Suez University</h4>
+                        <p data-en="Focusing on core computer science fundamentals including Data Structures, Algorithms, Software Engineering, Database Systems, System Analysis, and Object-Oriented Programming." data-ar="التركيز على أساسيات علوم الحاسب الأساسية بما في ذلك هياكل البيانات، الخوارزميات، هندسة البرمجيات، نظم قواعد البيانات، تحليل النظم، والبرمجة كائنية التوجه.">
+                            Focusing on core computer science fundamentals including Data Structures, Algorithms, Software Engineering, Database Systems, System Analysis, and Object-Oriented Programming.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="projects-container">
+            <div class="section-header">
+                <h2 data-en="FEATURED PROJECTS" data-ar="المشاريع المميزة">FEATURED PROJECTS</h2>
+                <p data-en="Detailed overview of my web development." data-ar="نظرة تفصيلية على أعمالي في تطوير الويب.">
+                    Detailed overview of my web development.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card-balanced">
+                    <div class="project-image-box">
+                        <img src="proj1.jpeg" alt="Arnoura Café">
+                        <div class="project-overlay">
+                            <a href="https://arwamhmed.github.io/Arnoura-cafe/" target="_blank" class="project-link-btn" title="View Live Demo">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Database</span>
+                        </div>
+
+                        <h3 data-en="Arnoura Café - Website" data-ar="أرنورا كافيه - موقع إلكتروني (Arnoura Café)">Arnoura Café - Website</h3>
+
+                        <p class="project-intro" data-en="A comprehensive, fully responsive web application built to simulate a real-world cafe management system, featuring user reservations and interactive reviews." data-ar="تطبيق ويب شامل ومصمم ليكون متجاوباً بالكامل لمحاكاة نظام إدارة كافيه حقيقي، يتضمن حجوزات المستخدمين ومراجعات تفاعلية.">
+                            A comprehensive, fully responsive web application built to simulate a real-world cafe management system, featuring user reservations and interactive reviews.
+                        </p>
+
+                        <ul class="project-features">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Designed a fully responsive user interface using HTML5, CSS3, and JavaScript for seamless mobile and desktop experiences." data-ar="تصميم واجهة مستخدم متجاوبة بالكامل باستخدام HTML5 و CSS3 وجافاسكريبت لتجربة سلسة على الهواتف وأجهزة الكمبيوتر.">
+                                    Designed a fully responsive user interface using HTML5, CSS3, and JavaScript for seamless mobile and desktop experiences.
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Implemented interactive table reservations and customer reviews successfully linked with a backend database." data-ar="تنفيذ ميزات حجز الطاولات ومراجعات العملاء وربطها بقاعدة بيانات خلفية.">
+                                    Implemented interactive table reservations and customer reviews successfully linked with a backend database.
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Added a smooth Dark and Light mode toggle for a customized and comfortable user experience." data-ar="إضافة زر تبديل سلس للوضع الليلي والنهاري لتجربة مستخدم مخصصة ومريحة.">
+                                    Added a smooth Dark and Light mode toggle for a customized and comfortable user experience.
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Built full bilingual language support enabling seamless translation between English and Arabic." data-ar="بناء دعم كامل للغتين يتيح الترجمة السلسة بين الإنجليزية والعربية.">
+                                    Built full bilingual language support enabling seamless translation between English and Arabic.
+                                </span>
+                            </li>
+                        </ul>
+
+                        <div class="project-footer">
+                            <a href="https://arwamhmed.github.io/Arnoura-cafe/" target="_blank" class="project-btn">
+                                <i class="fa-solid fa-globe"></i> <span data-en="Live Preview" data-ar="معاينة حية">Live Preview</span>
+                            </a>
+                            <a href="https://github.com/arwamhmed/Arnoura-cafe" target="_blank" class="project-github" title="GitHub Repository">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <div class="section-header">
+                <h2 data-en="SERVICES" data-ar="الخدمات">SERVICES</h2>
+                <p data-en="What I can do to help bring your ideas to life" data-ar="ما يمكنني تقديمه لمساعدتك في تحويل أفكارك إلى واقع">
+                    What I can do to help bring your ideas to life
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3 data-en="Front-End Development" data-ar="تطوير واجهات المستخدم">Front-End Development</h3>
+                    <p data-en="Transforming designs into live, interactive, and fast web interfaces using modern technologies with a strong focus on clean code." data-ar="تحويل التصاميم إلى واجهات ويب حية، تفاعلية، وسريعة باستخدام أحدث التقنيات مع التركيز على الكود النظيف.">
+                        Transforming designs into live, interactive, and fast web interfaces using modern technologies with a strong focus on clean code.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3 data-en="Landing Pages" data-ar="صفحات الهبوط">Landing Pages</h3>
+                    <p data-en="Designing and programming professional, attractive landing pages aimed at converting visitors into clients, focusing on fast loading and proper layout." data-ar="تصميم وبرمجة صفحات هبوط احترافية وجذابة تهدف لزيادة العملاء وتحويلهم، مع التركيز على سرعة التحميل وتوزيع العناصر بشكل تسويقي صحيح.">
+                        Designing and programming professional, attractive landing pages aimed at converting visitors into clients, focusing on fast loading and proper layout.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3 data-en="Personal Portfolios" data-ar="تصميم وبناء البورتفوليو">Personal Portfolios</h3>
+                    <p data-en="Building interactive and modern digital portfolios that reflect your professional identity and showcase your work in the best possible way." data-ar="بناء بورتفوليو رقمي تفاعلي وحديث يعكس هويتك المهنية ويبرز أعمالك بأفضل شكل ممكن للعملاء.">
+                        Building interactive and modern digital portfolios that reflect your professional identity and showcase your work in the best possible way.
+                    </p>
+                </div>
+            </div>
+
+            <div class="usp-box">
+                <h4 data-en="Why Work With Me?" data-ar="لماذا تختار العمل معي؟">Why Work With Me?</h4>
+                <p data-en="Combining clean and organized code, full bilingual support (English/Arabic with RTL/LTR), and a commitment to a smooth, fully responsive user experience across all devices." data-ar="الجمع بين كود نظيف ومنظم، الدعم الكامل للغتين العربية والإنجليزية (RTL/LTR)، والالتزام بتجربة مستخدم سلسة ومتجاوبة تماماً مع مختلف الأجهزة.">
+                    Combining clean and organized code, full bilingual support (English/Arabic with RTL/LTR), and a commitment to a smooth, fully responsive user experience across all devices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section" id="achievements">
+        <div class="experience-container">
+            <div class="section-header">
+                <h2 data-en="ACHIEVEMENTS & TRAINING" data-ar="الإنجازات والتدريبات">ACHIEVEMENTS & TRAINING</h2>
+                <p data-en="My professional journey, technical training, and milestones." data-ar="رحلتي المهنية، والتدريبات التقنية، والمحطات الهامة.">
+                    My professional journey, technical training, and milestones.
+                </p>
+            </div>
+            <div class="timeline">
+                <!-- DEPI Experience -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date" data-en="Jul 2026 - Present" data-ar="يوليو 2026 - الحاضر">Jul 2026 - Present</div>
+                    <div class="timeline-content">
+                        <h3 data-en="Software Development - React Frontend Web Developer Trainee" data-ar="متدربة تطوير برمجيات - مطورة واجهات أمامية باستخدام React">Software Development - React Frontend Web Developer Trainee</h3>
+                        <h4 data-en="Digital Egypt Pioneers Initiative (DEPI)" data-ar="مبادرة رواد مصر الرقمية (DEPI)">Digital Egypt Pioneers Initiative (DEPI)</h4>
+                        <ul class="project-features">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Studied modern web technologies including HTML, CSS, JavaScript, TypeScript, React, Git/GitHub, and backend integration with Node.js." data-ar="دراسة التقنيات الحديثة لتطوير الويب بما في ذلك HTML, CSS, JavaScript, TypeScript, React, Git/GitHub، وتكامل الباك إند باستخدام Node.js.">
+                                    Studied modern web technologies including HTML, CSS, JavaScript, TypeScript, React, Git/GitHub, and backend integration with Node.js.
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Developing professional soft skills and Business English proficiency to enhance workplace communication and career readiness." data-ar="تطوير المهارات الشخصية المهنية وإتقان اللغة الإنجليزية للأعمال لتحسين التواصل والجاهزية المهنية.">
+                                    Developing professional soft skills and Business English proficiency to enhance workplace communication and career readiness.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- .NET Web Development Experience -->
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date" data-en="Aug 2026 - Sep 2026" data-ar="أغسطس 2026 - سبتمبر 2026">Aug 2026 - Sep 2026</div>
+                    <div class="timeline-content">
+                        <h3 data-en="Web Development Using .NET Trainee" data-ar="متدربة تطوير الويب باستخدام .NET">Web Development Using .NET Trainee</h3>
+                        <h4 data-en="Information Technology Institute (ITI)" data-ar="معهد تكنولوجيا المعلومات (ITI)">Information Technology Institute (ITI)</h4>
+                        <ul class="project-features">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Studied foundational concepts in C# programming and data manipulation using LINQ." data-ar="دراسة المفاهيم الأساسية في لغة C# ومعالجة البيانات باستخدام LINQ.">
+                                    Studied foundational concepts in C# programming and data manipulation using LINQ.
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Learned database management and mapping using Entity Framework (EF)." data-ar="تعلم إدارة قواعد البيانات والربط باستخدام Entity Framework (EF).">
+                                    Learned database management and mapping using Entity Framework (EF).
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Developed robust web applications utilizing the ASP.NET MVC architecture." data-ar="تطوير تطبيقات ويب باستخدام ASP.NET MVC.">
+                                    Developed web applications utilizing the ASP.NET MVC.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITI Experience -->
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date" data-en="Jan 2026 - Feb 2026" data-ar="يناير 2026 - فبراير 2026">Jan 2026 - Feb 2026</div>
+                    <div class="timeline-content">
+                        <h3 data-en="Front-End Web Development Trainee" data-ar="متدربة تطوير واجهات أمامية">Front-End Web Development Trainee</h3>
+                        <h4 data-en="Information Technology Institute (ITI)" data-ar="معهد تكنولوجيا المعلومات (ITI)">Information Technology Institute (ITI)</h4>
+                        <ul class="project-features">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Completed intensive training focused on HTML, CSS, JavaScript, and Front-End project development." data-ar="إتمام تدريب مكثف يركز على HTML, CSS, JavaScript وتطوير مشاريع الواجهات الأمامية.">
+                                    Completed intensive training focused on HTML, CSS, JavaScript, and Front-End project development.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Red Sea Ports Experience -->
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date" data-en="Jul 2025 - Aug 2025" data-ar="يوليو 2025 - أغسطس 2025">Jul 2025 - Aug 2025</div>
+                    <div class="timeline-content">
+                        <h3 data-en="IT & Digital Transformation Intern" data-ar="متدربة تكنولوجيا المعلومات والتحول الرقمي">IT & Digital Transformation Intern</h3>
+                        <h4 data-en="General Authority for Red Sea Ports" data-ar="الهيئة العامة لموانئ البحر الأحمر">General Authority for Red Sea Ports</h4>
+                        <ul class="project-features">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-en="Gained practical experience in IT support, computer networks, Microsoft Office, ERP systems, and digital transformation." data-ar="اكتساب خبرة عملية في الدعم الفني، شبكات الحاسب، مايكروسوفت أوفيس، أنظمة تخطيط موارد المؤسسات (ERP)، والتحول الرقمي.">
+                                    Gained practical experience in IT support, computer networks, Microsoft Office, ERP systems, and digital transformation.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="section-title-box">
+                <h2 class="gradient-title" data-en="GET IN TOUCH" data-ar="تواصل معي">GET IN TOUCH</h2>
+                <p data-en="Have a project in mind or want to collaborate? Let's turn your ideas into reality." data-ar="هل لديك فكرة مشروع أو ترغب في التعاون؟ دعنا نحول أفكارك إلى واقع.">Have a project in mind or want to collaborate? Let's turn your ideas into reality.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-cards-list">
+                    <a href="mailto:arwamhmed27@gmail.com" class="contact-info-card email-card">
+                        <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="card-info">
+                            <span class="card-title" data-en="Email" data-ar="البريد الإلكتروني">Email</span>
+                            <span class="card-value">arwamhmed27@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/201010824706" target="_blank" class="contact-info-card whatsapp-card">
+                        <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="card-info">
+                            <span class="card-title" data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
+                            <span class="card-value">+20 101 082 4706</span>
+                        </div>
+                    </a>
+
+                    <a href="https://linkedin.com/in/arwa-mohamed-front-end" target="_blank" class="contact-info-card linkedin-card">
+                        <div class="icon-box"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div class="card-info">
+                            <span class="card-title" data-en="LinkedIn" data-ar="لينكد إن">LinkedIn</span>
+                            <span class="card-value">arwa-mohamed-front-end</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/arwamhmed" target="_blank" class="contact-info-card github-card">
+                        <div class="icon-box"><i class="fa-brands fa-github"></i></div>
+                        <div class="card-info">
+                            <span class="card-title" data-en="GitHub" data-ar="جيت هب">GitHub</span>
+                            <span class="card-value">arwamhmed</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- ✅ تم إغلاق contact-grid و contact-container -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-bio">
+                <h3 class="gradient-title" data-en="Arwa Mohamed" data-ar="أروى محمد">Arwa Mohamed</h3>
+                <p data-en="Professional Front-End Developer focused on clean code & stellar user experiences." data-ar="مطورة واجهات أمامية محترفة تركز على الكود النظيف وتجارب المستخدم الاستثنائية.">
+                    Professional Front-End Developer focused on clean code & stellar user experiences.
+                </p>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                <ul>
+                    <li><a href="#home" class="gradient-hover" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="#about" class="gradient-hover" data-en="About" data-ar="عني">About</a></li>
+                    <li><a href="#education" class="gradient-hover" data-en="Education" data-ar="التعليم">Education</a></li>
+                    <li><a href="#projects" class="gradient-hover" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+                    <li><a href="#services" class="gradient-hover" data-en="Services" data-ar="الخدمات">Services</a></li>
+                    <li><a href="#achievements" class="gradient-hover" data-en="Achievements" data-ar="الإنجازات">Achievements</a></li>
+                    <li><a href="#contact" class="gradient-hover" data-en="Contact" data-ar="تواصل معي">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-social">
+                <h4 data-en="Connect With Me" data-ar="تواصل معي">Connect With Me</h4>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/arwa-mohamed-front-end" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/arwamhmed" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://wa.me/201010824706" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:arwamhmed27@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-en="© 2026 Arwa Mohamed. All Rights Reserved." data-ar="© ٢٠٢٦ أروى محمد. جميع الحقوق محفوظة.">
+                © 2026 Arwa Mohamed. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>

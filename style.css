@@ -39,7 +39,7 @@
 }
 
 /* ======================================== */
-/* 3. RESET & BASE STYLES                  */
+/* 3. RESET & BASE STYLES (All Light)      */
 /* ======================================== */
 * {
     margin: 0;
@@ -49,22 +49,32 @@
     scroll-behavior: smooth;
 }
 
+html {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 body {
     background-color: var(--bg-main);
     color: var(--text-main);
     overflow-x: hidden;
+    max-width: 100vw;
     transition: background-color 0.4s ease, color 0.4s ease;
-    font-weight: 300;
+    font-weight: 300;          /* خفيف جداً */
+    font-size: 15px;           /* أصغر شوية من 16 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* ======================================== */
-/* 4. HEADER & NAVIGATION (DESKTOP)        */
+/* 4. HEADER & NAVIGATION (Light Weight)   */
 /* ======================================== */
 .luxury-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,8 +109,8 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: var(--text-muted);
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;             /* نزلنا من 600 → 500 */
     letter-spacing: 1.5px;
     transition: color 0.3s ease;
     position: relative;
@@ -135,17 +145,18 @@ nav ul li a.active::after {
 .menu-toggle {
     background: none;
     border: none;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-main, #fff);
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 8px;
     z-index: 1001;
+    font-weight: 400;
 }
 
 .menu-toggle i {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-main, #fff);
 }
 
@@ -159,8 +170,8 @@ nav ul li a.active::after {
     padding: 8px 16px;
     border-radius: 30px;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 500;             /* نزلنا من 600 → 500 */
+    font-size: 12px;
     transition: all 0.3s ease;
 }
 
@@ -181,7 +192,7 @@ nav ul li a.active::after {
 }
 
 /* ======================================== */
-/* 7. HERO SECTION                         */
+/* 7. HERO SECTION (Slim & Stylish)        */
 /* ======================================== */
 .hero-luxury {
     position: relative;
@@ -192,6 +203,7 @@ nav ul li a.active::after {
     background: radial-gradient(circle at 10% 20%, rgba(147, 51, 234, 0.08) 0%, transparent 40%),
                 radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.08) 0%, transparent 40%);
     overflow: hidden;
+    max-width: 100vw;
 }
 
 .glow-orb {
@@ -238,30 +250,33 @@ nav ul li a.active::after {
     flex-direction: column;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     letter-spacing: -0.5px;
 }
 
 .greeting-line {
-    font-size: 26px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 300;
     color: var(--text-muted);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
 }
 
 .name-line {
-    font-size: 42px;
+    font-size: 32px;
+    font-weight: 500;
     background: linear-gradient(135deg, var(--text-main) 30%, var(--accent-pink) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
 }
 
 .hero-role {
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 400;
     color: var(--role-color);
-    margin-bottom: 35px;
-    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
 .hero-actions-container {
@@ -275,8 +290,8 @@ nav ul li a.active::after {
     display: flex;
     align-items: center;
     gap: 18px;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     color: var(--text-muted);
 }
 
@@ -287,8 +302,8 @@ nav ul li a.active::after {
     padding: 14px 34px;
     border-radius: 35px;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 400;           /* نزلنا من 500 → 400 */
+    font-size: 14px;
     box-shadow: 0 10px 25px rgba(219, 39, 119, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -313,7 +328,7 @@ nav ul li a.active::after {
     align-items: center;
     justify-content: center;
     color: var(--text-main);
-    font-size: 18px;
+    font-size: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
 }
@@ -366,13 +381,14 @@ nav ul li a.active::after {
 }
 
 /* ======================================== */
-/* 8. ABOUT SECTION                        */
+/* 8. ABOUT SECTION (Light & Airy)        */
 /* ======================================== */
 .who-am-i {
     background-color: var(--about-bg);
     color: var(--about-text);
     padding: 130px 80px;
     width: 100%;
+    max-width: 100vw;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -386,16 +402,16 @@ nav ul li a.active::after {
 }
 
 .who-text h2 {
-    font-size: 46px;
-    font-weight: 600;
+    font-size: 38px;            /* نزلنا من 46 → 38 */
+    font-weight: 600;           /* نزلنا من 700 → 600 */
     color: var(--about-text);
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
 
 .who-text h3 {
-    font-size: 21px;
-    font-weight: 400;
+    font-size: 18px;            /* نزلنا من 21 → 18 */
+    font-weight: 300;           /* نزلنا من 400 → 300 */
     color: var(--about-h3);
     margin-bottom: 24px;
     line-height: 1.7;
@@ -403,7 +419,7 @@ nav ul li a.active::after {
 }
 
 .who-text p {
-    font-size: 17px;
+    font-size: 15px;            /* نزلنا من 17 → 15 */
     font-weight: 300;
     color: var(--about-p);
     line-height: 2;
@@ -416,7 +432,7 @@ nav ul li a.active::after {
     align-items: center;
     gap: 15px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     color: var(--about-text);
     letter-spacing: 1px;
 }
@@ -428,7 +444,7 @@ nav ul li a.active::after {
 
 .about-socials a {
     color: var(--about-text);
-    font-size: 20px;
+    font-size: 18px;
     transition: color 0.3s, transform 0.3s;
 }
 
@@ -452,15 +468,15 @@ nav ul li a.active::after {
 .skill-info {
     display: flex;
     justify-content: space-between;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 400;           /* نزلنا من 500 → 400 */
+    font-size: 14px;
     color: #ffffff;
     letter-spacing: 1px;
 }
 
 .progress-bar {
     width: 100%;
-    height: 10px;
+    height: 8px;
     background-color: var(--progress-bg);
     border-radius: 5px;
     overflow: hidden;
@@ -482,6 +498,7 @@ nav ul li a.active::after {
     color: var(--text-main);
     padding: 130px 80px;
     width: 100%;
+    max-width: 100vw;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -496,8 +513,8 @@ nav ul li a.active::after {
 }
 
 .section-header h2 {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 34px;            /* نزلنا من 40 → 34 */
+    font-weight: 600;           /* نزلنا من 700 → 600 */
     background: linear-gradient(135deg, var(--text-main) 30%, var(--accent-pink) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -506,9 +523,9 @@ nav ul li a.active::after {
 }
 
 .section-header p {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.5px;
 }
 
@@ -555,43 +572,44 @@ nav ul li a.active::after {
 }
 
 .edu-date {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 600;
     color: var(--accent-pink);
     letter-spacing: 1px;
     margin-bottom: 8px;
 }
 
 .edu-content h3 {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;           /* نزلنا من 700 → 600 */
     color: var(--text-main);
     margin-bottom: 5px;
 }
 
 .edu-content h4 {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
     color: var(--text-muted);
     margin-bottom: 18px;
 }
 
 .edu-content p {
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 300;           /* نزلنا من 400 → 300 */
     color: var(--text-muted);
     line-height: 1.8;
     letter-spacing: 0.5px;
 }
 
 /* ======================================== */
-/* 10. PROJECTS SECTION                    */
+/* 10. PROJECTS SECTION (Clean)            */
 /* ======================================== */
 .projects-section {
     background-color: var(--bg-main);
     color: var(--text-main);
     padding: 130px 80px;
     width: 100%;
+    max-width: 100vw;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -694,8 +712,8 @@ nav ul li a.active::after {
 }
 
 .project-tags span {
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 11px;
+    font-weight: 600;
     color: var(--accent-pink);
     background: rgba(219, 39, 119, 0.08);
     padding: 6px 14px;
@@ -705,16 +723,16 @@ nav ul li a.active::after {
 }
 
 .project-info h3 {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 24px;            /* نزلنا من 28 → 24 */
+    font-weight: 600;           /* نزلنا من 700 → 600 */
     color: var(--text-main);
     margin-bottom: 12px;
     font-family: inherit;
 }
 
 .project-intro {
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 300;           /* نزلنا من 400 → 300 */
     color: var(--text-main);
     line-height: 1.7;
     margin-bottom: 25px;
@@ -736,8 +754,8 @@ nav ul li a.active::after {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 300;           /* نزلنا من 400 → 300 */
     color: var(--text-main);
     line-height: 1.6;
     font-family: inherit;
@@ -745,7 +763,7 @@ nav ul li a.active::after {
 
 .project-features li i {
     color: var(--accent-pink);
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 3px;
     flex-shrink: 0;
 }
@@ -767,8 +785,8 @@ nav ul li a.active::after {
     padding: 12px 28px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 13px;
     box-shadow: 0 6px 15px rgba(219, 39, 119, 0.25);
     transition: transform 0.3s ease;
     font-family: inherit;
@@ -788,7 +806,7 @@ nav ul li a.active::after {
     align-items: center;
     justify-content: center;
     color: var(--text-main);
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -807,6 +825,7 @@ nav ul li a.active::after {
     background-color: var(--bg-main);
     color: var(--text-main);
     width: 100%;
+    max-width: 100vw;
 }
 
 .services-container {
@@ -845,7 +864,7 @@ nav ul li a.active::after {
 }
 
 .service-icon {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 20px;
     color: var(--accent-pink);
     background: rgba(219, 39, 119, 0.08);
@@ -858,15 +877,15 @@ nav ul li a.active::after {
 }
 
 .service-card h3 {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 18px;            /* نزلنا من 20 → 18 */
+    font-weight: 600;
     margin-bottom: 15px;
     color: var(--text-main);
 }
 
 .service-card p {
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 300;           /* نزلنا من 400 → 300 */
     color: var(--text-muted);
     line-height: 1.8;
 }
@@ -891,8 +910,8 @@ nav ul li a.active::after {
 }
 
 .usp-box h4 {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     margin-bottom: 12px;
     background: linear-gradient(135deg, var(--text-main) 30%, var(--accent-pink) 100%);
     -webkit-background-clip: text;
@@ -902,10 +921,10 @@ nav ul li a.active::after {
 }
 
 .usp-box p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.8;
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 300;
 }
 
 /* ======================================== */
@@ -916,6 +935,7 @@ nav ul li a.active::after {
     background-color: var(--bg-main);
     color: var(--text-main);
     width: 100%;
+    max-width: 100vw;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -955,8 +975,8 @@ nav ul li a.active::after {
     display: inline-block;
     padding: 4px 12px;
     margin-bottom: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 500;
     color: var(--accent-pink);
     background-color: rgba(219, 39, 119, 0.1);
     border-radius: 20px;
@@ -972,15 +992,15 @@ nav ul li a.active::after {
 }
 
 .timeline-content h3 {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     margin-bottom: 5px;
     color: var(--text-main);
 }
 
 .timeline-content h4 {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
     color: var(--text-muted);
     margin-bottom: 15px;
 }
@@ -996,7 +1016,8 @@ nav ul li a.active::after {
     align-items: flex-start;
     gap: 10px;
     margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 300;
     color: var(--text-main);
 }
 
@@ -1013,6 +1034,7 @@ nav ul li a.active::after {
     background-color: var(--bg-main);
     color: var(--text-main);
     width: 100%;
+    max-width: 100vw;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -1027,8 +1049,8 @@ nav ul li a.active::after {
 }
 
 .section-title-box .gradient-title {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 34px;            /* نزلنا من 40 → 34 */
+    font-weight: 600;           /* نزلنا من 700 → 600 */
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
@@ -1038,9 +1060,9 @@ nav ul li a.active::after {
 }
 
 .section-title-box p {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.5px;
 }
 
@@ -1085,7 +1107,7 @@ nav ul li a.active::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 18px;
     flex-shrink: 0;
 }
 
@@ -1116,15 +1138,15 @@ nav ul li a.active::after {
 }
 
 .card-title {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--text-muted);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .card-value {
-    font-size: 15px;
+    font-size: 14px;
     color: var(--text-main);
-    font-weight: 600;
+    font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1171,6 +1193,7 @@ nav ul li a.active::after {
     border-top: 2px solid var(--card-border);
     padding: 80px 20px 20px;
     margin-top: 80px;
+    max-width: 100vw;
 }
 
 .footer-container {
@@ -1191,19 +1214,21 @@ nav ul li a.active::after {
     background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .footer-col h4 {
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .footer-col p {
     opacity: 0.85;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    font-weight: 300;
     line-height: 1.7;
     max-width: 400px;
     color: #e2e8f0;
@@ -1221,7 +1246,8 @@ nav ul li a.active::after {
 .footer-links a {
     text-decoration: none;
     color: #e2e8f0;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    font-weight: 400;
     transition: all 0.4s ease;
     position: relative;
     display: inline-block;
@@ -1258,13 +1284,13 @@ nav ul li a.active::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.2);
     color: #ffffff;
     transition: all 0.4s ease;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
 }
 
@@ -1282,7 +1308,8 @@ nav ul li a.active::after {
     border-top: 2px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     opacity: 0.7;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 300;
     color: #cbd5e1;
 }
 
@@ -1292,8 +1319,6 @@ nav ul li a.active::after {
 
 /* ---- Desktop First: Force Desktop Header on large screens ---- */
 @media (min-width: 993px) {
-    /* No need to hide anything, default styles work.
-       Just ensure the nav-menu is not collapsed. */
     .nav-menu {
         max-height: none !important;
         overflow: visible !important;
@@ -1343,7 +1368,7 @@ nav ul li a.active::after {
         padding-bottom: 10px !important;
     }
 
-    /* Hero - without centering (aligned left) */
+    /* Hero - Slimmer text on mobile */
     .hero-luxury {
         padding: 120px 15px 40px 15px !important;
     }
@@ -1354,7 +1379,7 @@ nav ul li a.active::after {
     }
 
     .hero-title .name-line {
-        font-size: 32px !important;
+        font-size: 26px !important;
     }
 
     .hero-actions-container {
@@ -1393,6 +1418,10 @@ nav ul li a.active::after {
         padding: 80px 20px !important;
     }
 
+    .who-text h2 {
+        font-size: 30px !important;
+    }
+
     /* Education */
     .education-section {
         padding: 80px 20px !important;
@@ -1424,6 +1453,14 @@ nav ul li a.active::after {
 
     .services-grid {
         grid-template-columns: 1fr !important;
+    }
+
+    .section-header h2 {
+        font-size: 28px !important;
+    }
+
+    .section-title-box .gradient-title {
+        font-size: 28px !important;
     }
 
     /* General Overflow Fix */

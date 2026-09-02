@@ -1,8 +1,8 @@
-/* ============================================================
-   IMPORTS & ROOT VARIABLES
-   ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cairo:wght@400;600;700;900&display=swap');
 
+/* ============================================================
+   CSS VARIABLES
+   ============================================================ */
 :root {
     --bg-main: #fcfbfe;
     --bg-header: rgba(252, 251, 254, 0.85);
@@ -341,7 +341,7 @@ nav ul li a.active::after {
 }
 
 /* ============================================================
-   ABOUT SECTION (WHO AM I)
+   ABOUT SECTION
    ============================================================ */
 .who-am-i {
     background-color: var(--about-bg);
@@ -413,7 +413,7 @@ nav ul li a.active::after {
 }
 
 /* ============================================================
-   SKILLS BARS
+   SKILLS
    ============================================================ */
 .skills-bars {
     display: flex;
@@ -661,7 +661,6 @@ nav ul li a.active::after {
     padding: 45px 50px;
     display: flex;
     flex-direction: column;
-    font-family: inherit;
 }
 
 .project-tags {
@@ -679,7 +678,6 @@ nav ul li a.active::after {
     padding: 6px 14px;
     border-radius: 20px;
     letter-spacing: 0.5px;
-    font-family: inherit;
 }
 
 .project-info h3 {
@@ -687,7 +685,6 @@ nav ul li a.active::after {
     font-weight: 700;
     color: var(--text-main);
     margin-bottom: 12px;
-    font-family: inherit;
 }
 
 .project-intro {
@@ -696,7 +693,6 @@ nav ul li a.active::after {
     color: var(--text-main);
     line-height: 1.7;
     margin-bottom: 25px;
-    font-family: inherit;
     border-left: 3px solid var(--accent-pink);
     padding-left: 14px;
 }
@@ -718,7 +714,6 @@ nav ul li a.active::after {
     font-weight: 500;
     color: var(--text-main);
     line-height: 1.6;
-    font-family: inherit;
 }
 
 .project-features li i {
@@ -749,7 +744,6 @@ nav ul li a.active::after {
     font-size: 14px;
     box-shadow: 0 6px 15px rgba(219, 39, 119, 0.25);
     transition: transform 0.3s ease;
-    font-family: inherit;
 }
 
 .project-btn:hover {
@@ -849,9 +843,6 @@ nav ul li a.active::after {
     line-height: 1.8;
 }
 
-/* ============================================================
-   USP BOX
-   ============================================================ */
 .usp-box {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -890,7 +881,7 @@ nav ul li a.active::after {
 }
 
 /* ============================================================
-   EXPERIENCE / ACHIEVEMENTS (TIMELINE)
+   ACHIEVEMENTS (TIMELINE)
    ============================================================ */
 .experience-section {
     padding: 130px 80px;
@@ -1108,7 +1099,7 @@ nav ul li a.active::after {
     text-overflow: ellipsis;
 }
 
-/* Hover state overrides for each contact card */
+/* Contact card hover effects */
 .contact-info-card.email-card:hover .card-value,
 .contact-info-card.email-card:hover .icon-box {
     color: #ea4335 !important;
@@ -1266,37 +1257,27 @@ nav ul li a.active::after {
 }
 
 /* ============================================================
-   RESPONSIVE – TABLETS & SMALL SCREENS (max-width: 992px)
+   RESPONSIVE DESIGN (CONSOLIDATED)
    ============================================================ */
-@media (max-width: 992px) {
-    /* ----- Global fixes ----- */
-    html,
-    body {
-        width: 100% !important;
-        overflow-x: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
 
-    /* ----- Header (mobile) ----- */
+/* --- Tablets & large phones (max-width: 992px) --- */
+@media (max-width: 992px) {
+    /* Header */
     .luxury-header {
         padding: 15px 20px;
         flex-direction: column;
         align-items: stretch;
     }
-
     .mobile-header-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
     }
-
     .nav-spacer,
     .luxury-header>.header-controls {
         display: none !important;
     }
-
     .menu-toggle {
         background: none;
         border: none;
@@ -1308,24 +1289,20 @@ nav ul li a.active::after {
         gap: 8px;
         z-index: 1001;
     }
-
     .menu-toggle i {
         font-size: 20px;
         color: var(--text-main, #fff);
     }
-
     .nav-menu {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
         width: 100%;
     }
-
     .nav-menu.active {
         max-height: 400px;
         margin-top: 15px;
     }
-
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -1333,232 +1310,247 @@ nav ul li a.active::after {
         padding-bottom: 10px;
     }
 
-    /* ----- Hero ----- */
+    /* Hero */
     .hero-luxury {
         padding: 120px 15px 40px 15px !important;
         text-align: center;
     }
-
     .hero-wrapper {
         grid-template-columns: 1fr !important;
         gap: 30px !important;
         max-width: 100% !important;
         padding: 0 !important;
     }
-
     .hero-title .name-line {
         font-size: 32px;
     }
-
     .hero-actions-container {
         align-items: center;
     }
-
-    /* ----- Profile image fix (mobile) ----- */
     .desktop-hero-visual {
         display: none !important;
     }
-
     .mobile-hero-visual {
         display: flex !important;
         justify-content: center;
         margin: 20px 0;
     }
 
+    /* Fix profile image frame on mobile */
     .glass-card-frame {
-        max-width: 100% !important;
-        padding: 12px !important;
+        padding: 10px !important;
+        max-width: 220px !important;
         margin: 0 auto;
         display: inline-block;
     }
-
     .profile-glow-box {
-        width: 220px !important;
-        height: 220px !important;
+        width: 200px !important;
+        height: 200px !important;
         max-width: 100%;
         margin: 0 auto;
+        border-radius: 20px;
     }
 
-    /* ----- About ----- */
+    /* About */
     .who-am-i {
         padding: 80px 20px;
     }
-
     .who-container {
         grid-template-columns: 1fr;
         gap: 40px;
         padding: 0 15px;
     }
 
-    /* ----- Education ----- */
+    /* Education */
     .education-section {
         padding: 80px 20px;
     }
-
     .edu-card {
         flex-direction: column;
         padding: 25px;
         gap: 20px;
     }
 
-    /* ----- Projects ----- */
+    /* Projects */
     .projects-section {
         padding: 80px 20px;
     }
-
     .project-image-box {
         height: 280px;
     }
-
     .project-info {
         padding: 25px;
     }
 
-    /* ----- Services ----- */
+    /* Services */
     .services-section {
         padding: 80px 20px;
     }
-
     .services-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    /* ----- Experience / Achievements (Timeline) ----- */
+    /* Achievements (Timeline) - FIXED for mobile */
     .experience-section {
-        padding: 80px 20px;
+        padding: 80px 15px !important;
     }
-
     .timeline {
-        padding-left: 20px;
+        padding-left: 20px !important;
+        border-left-width: 2px !important;
+        margin: 20px 0;
     }
-
+    .timeline-item {
+        margin-bottom: 30px !important;
+        padding-left: 5px;
+    }
     .timeline-dot {
-        left: -27px;
-        width: 12px;
-        height: 12px;
+        left: -26px !important;
+        width: 12px !important;
+        height: 12px !important;
+        border-width: 2px !important;
     }
-
+    .timeline-date {
+        font-size: 12px !important;
+        padding: 3px 10px !important;
+        margin-bottom: 6px !important;
+    }
     .timeline-content {
-        padding: 20px 15px;
+        padding: 18px 15px !important;
+        border-radius: 16px !important;
+    }
+    .timeline-content h3 {
+        font-size: 17px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 4px !important;
+    }
+    .timeline-content h4 {
+        font-size: 14px !important;
+        margin-bottom: 12px !important;
+    }
+    .timeline-content .project-features li {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        gap: 8px !important;
+        margin-bottom: 6px !important;
+    }
+    .timeline-content .project-features li i {
+        font-size: 14px !important;
+        margin-top: 2px !important;
     }
 
-    /* ----- Contact ----- */
+    /* Contact */
     .contact-section {
         padding: 80px 20px;
     }
-
     .contact-grid {
         flex-direction: column;
     }
-
     .contact-cards-list {
         max-width: 100%;
     }
 
-    /* ----- Typography tweaks for readability ----- */
-    .timeline-content h3,
-    .edu-content h3,
-    .project-info h3 {
-        font-size: 18px !important;
-        line-height: 1.4 !important;
-    }
-
-    .timeline-content h4,
-    .edu-content h4 {
-        font-size: 14px !important;
-    }
-
-    .timeline-content .project-features li,
-    .project-features li {
-        font-size: 12px !important;
-        line-height: 1.5 !important;
-        gap: 8px !important;
-    }
-
-    /* ----- Footer (already handled below for 768px) ----- */
-}
-
-/* ============================================================
-   RESPONSIVE – FOOTER & EXTRA SMALL (max-width: 768px)
-   ============================================================ */
-@media (max-width: 768px) {
+    /* Footer */
     .footer-container {
         grid-template-columns: 1fr;
         gap: 40px;
-    }
-
-    .footer-col {
         text-align: center;
     }
-
     .footer-col p,
     .footer-col .social-icons {
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
     }
-
     .footer-col p {
         max-width: 100%;
     }
 }
 
-/* ============================================================
-   RESPONSIVE – VERY SMALL PHONES (max-width: 480px)
-   ============================================================ */
+/* --- Small phones (max-width: 480px) --- */
 @media (max-width: 480px) {
-    .profile-glow-box {
-        width: 170px !important;
-        height: 170px !important;
+    .glass-card-frame {
+        padding: 8px !important;
+        max-width: 170px !important;
     }
-
+    .profile-glow-box {
+        width: 150px !important;
+        height: 150px !important;
+    }
     .hero-title .name-line {
         font-size: 28px;
     }
-
     .greeting-line {
         font-size: 20px;
     }
-
     .hero-role {
         font-size: 18px;
     }
-
     .section-header h2,
     .section-title-box .gradient-title {
         font-size: 30px;
     }
-
     .who-text h2 {
         font-size: 34px;
     }
-
     .who-text h3 {
         font-size: 18px;
     }
-
     .edu-content h3 {
         font-size: 16px !important;
     }
-
     .project-info h3 {
         font-size: 16px !important;
     }
-
     .service-card {
         padding: 25px 20px;
     }
-
     .usp-box {
         padding: 25px 20px;
     }
-
     .contact-info-card {
         padding: 15px;
     }
-
     .card-value {
         font-size: 13px;
+    }
+
+    /* Timeline extra small adjustments */
+    .timeline {
+        padding-left: 16px !important;
+    }
+    .timeline-dot {
+        left: -22px !important;
+        width: 10px !important;
+        height: 10px !important;
+    }
+    .timeline-content {
+        padding: 14px 12px !important;
+    }
+    .timeline-content h3 {
+        font-size: 15px !important;
+    }
+    .timeline-content h4 {
+        font-size: 13px !important;
+    }
+    .timeline-content .project-features li {
+        font-size: 12px !important;
+    }
+}
+
+/* --- Extra small screens (max-width: 768px) for footer only --- */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer-col {
+        text-align: center;
+    }
+    .footer-col p,
+    .footer-col .social-icons {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
     }
 }

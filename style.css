@@ -46,12 +46,22 @@
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     background-color: var(--bg-main);
     color: var(--text-main);
-    overflow-x: hidden;
     transition: background-color 0.4s ease, color 0.4s ease;
     font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 /* ============================================================
@@ -1336,7 +1346,7 @@ nav ul li a.active::after {
         margin: 20px 0;
     }
 
-    /* Fix profile image frame on mobile - UPDATED TO 300px */
+    /* Fix profile image frame on mobile - 300px */
     .glass-card-frame {
         padding: 10px !important;
         max-width: 330px !important;

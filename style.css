@@ -1336,16 +1336,16 @@ nav ul li a.active::after {
         margin: 20px 0;
     }
 
-    /* Fix profile image frame on mobile */
+    /* Fix profile image frame on mobile - UPDATED SIZE */
     .glass-card-frame {
         padding: 10px !important;
-        max-width: 220px !important;
+        max-width: 270px !important;
         margin: 0 auto;
         display: inline-block;
     }
     .profile-glow-box {
-        width: 200px !important;
-        height: 200px !important;
+        width: 240px !important;
+        height: 240px !important;
         max-width: 100%;
         margin: 0 auto;
         border-radius: 20px;
@@ -1471,11 +1471,11 @@ nav ul li a.active::after {
 @media (max-width: 480px) {
     .glass-card-frame {
         padding: 8px !important;
-        max-width: 170px !important;
+        max-width: 210px !important;
     }
     .profile-glow-box {
-        width: 150px !important;
-        height: 150px !important;
+        width: 190px !important;
+        height: 190px !important;
     }
     .hero-title .name-line {
         font-size: 28px;

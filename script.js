@@ -8,7 +8,6 @@ let currentLang = 'en';
 /* ======================================== */
 function toggleLanguage() {
     const htmlTag = document.documentElement;
-    const langBtn = document.getElementById('langToggle');
     const elements = document.querySelectorAll('[data-en]');
     const placeholders = document.querySelectorAll('[data-en-placeholder]');
 
@@ -16,12 +15,10 @@ function toggleLanguage() {
         currentLang = 'ar';
         htmlTag.setAttribute('dir', 'rtl');
         htmlTag.setAttribute('lang', 'ar');
-        if (langBtn) langBtn.textContent = 'English';
     } else {
         currentLang = 'en';
         htmlTag.setAttribute('dir', 'ltr');
         htmlTag.setAttribute('lang', 'en');
-        if (langBtn) langBtn.textContent = 'العربية';
     }
 
     elements.forEach(el => {
@@ -37,6 +34,8 @@ function toggleLanguage() {
             el.placeholder = placeholderText;
         }
     });
+
+    updateLanguageButtons();
 }
 
 /* ======================================== */
@@ -44,24 +43,60 @@ function toggleLanguage() {
 /* ======================================== */
 function toggleTheme() {
     const htmlTag = document.documentElement;
-    const themeBtn = document.getElementById('themeToggle');
     const currentTheme = htmlTag.getAttribute('data-theme');
 
     if (currentTheme === 'dark') {
         htmlTag.setAttribute('data-theme', 'light');
-        if (themeBtn) themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
     } else {
         htmlTag.setAttribute('data-theme', 'dark');
-        if (themeBtn) themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
+
+    updateThemeButtons();
 }
 
 /* ======================================== */
-/* 4. DOM CONTENT LOADED HANDLER           */
+/* 4. UPDATE UI BUTTONS                    */
+/* ======================================== */
+function updateLanguageButtons() {
+    const langBtns = document.querySelectorAll('#langToggle, #langToggleMobile');
+    langBtns.forEach(btn => {
+        btn.textContent = currentLang === 'en' ? 'العربية' : 'English';
+    });
+}
+
+function updateThemeButtons() {
+    const themeBtns = document.querySelectorAll('#themeToggle, #themeToggleMobile');
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const icon = currentTheme === 'dark' ? 'moon' : 'sun';
+    themeBtns.forEach(btn => {
+        btn.innerHTML = `<i class="fa-solid fa-${icon}"></i>`;
+    });
+}
+
+/* ======================================== */
+/* 5. DOM CONTENT LOADED HANDLER           */
 /* ======================================== */
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ---- 4a. Skills Progress Animation ---- */
+    /* ---- 5a. Remove inline onclick handlers to avoid conflicts ---- */
+    const allLangBtns = document.querySelectorAll('#langToggle, #langToggleMobile');
+    const allThemeBtns = document.querySelectorAll('#themeToggle, #themeToggleMobile');
+
+    allLangBtns.forEach(btn => {
+        btn.onclick = null; // Remove inline onclick
+        btn.addEventListener('click', toggleLanguage);
+    });
+
+    allThemeBtns.forEach(btn => {
+        btn.onclick = null; // Remove inline onclick
+        btn.addEventListener('click', toggleTheme);
+    });
+
+    // Set initial button states
+    updateLanguageButtons();
+    updateThemeButtons();
+
+    /* ---- 5b. Skills Progress Animation ---- */
     const progressSection = document.querySelector('.skills-bars');
     const progressBars = document.querySelectorAll('.progress');
     let animated = false;
@@ -80,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /* ---- 4b. Active Navigation Links on Scroll ---- */
+    /* ---- 5c. Active Navigation Links on Scroll ---- */
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -103,14 +138,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ---- 4c. Combined Scroll Listener (to avoid redundancy) ---- */
+    /* ---- 5d. Combined Scroll Listener ---- */
     function handleScroll() {
         showProgress();
         activeMenu();
     }
     window.addEventListener('scroll', handleScroll);
 
-    /* ---- 4d. Mobile Navigation Menu Toggle ---- */
+    /* ---- 5e. Mobile Navigation Menu Toggle ---- */
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.querySelector('.nav-menu');
 

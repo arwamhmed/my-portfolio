@@ -584,13 +584,15 @@ nav ul li a.active::after {
 }
 
 .projects-container {
-    max-width: 900px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 .projects-grid {
     display: flex;
     justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .project-card-balanced {
@@ -601,7 +603,8 @@ nav ul li a.active::after {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(147, 51, 234, 0.06);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    width: 100%;
+    width: calc(50% - 20px);
+    min-width: 320px;
     display: flex;
     flex-direction: column;
 }
@@ -780,7 +783,6 @@ nav ul li a.active::after {
     color: #ffffff;
     border-color: var(--accent-pink);
 }
-
 /* ============================================================
    SERVICES
    ============================================================ */
